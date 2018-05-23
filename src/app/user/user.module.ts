@@ -8,13 +8,18 @@ import {
   RegistrationComponent,
   UserService
 } from './user.barrel';
+import { TranslateModule, MissingTranslationHandler } from '@ngx-translate/core';
+import { MyMissingTemplateHandler } from '../shared/handlers/missingtemplate.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    UserRoutingModule
+    UserRoutingModule,
+    TranslateModule.forChild({
+      missingTranslationHandler: {provide: MissingTranslationHandler, useClass: MyMissingTemplateHandler}
+    })
   ],
   declarations: [
     LoginComponent,

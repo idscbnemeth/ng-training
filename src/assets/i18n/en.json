@@ -1,0 +1,44 @@
+{
+    "home": {
+        "test":"Home works!"
+    },
+    "navigation": {
+        "homeLink":"Home",
+        "taskLink":"Tasks",
+        "registrationLink":"Registration",
+        "loginLink":"Log in",
+        "logoutLink":"Log out"
+    },
+    "notFound": {
+        "test":"not-found works!"
+    },
+    "registration": {
+        "title":"Registration",
+        "name":"Name",
+        "email":"Email",
+        "password":"Password",
+        "passwordConf":"Password (confirm)",
+        "regBtn":"Register",
+        "cancelBtn":"Reset",
+        "nameError":"Name is required!",
+        "emailError":"Valid email is required!",
+        "passwordError":"Password is required and should be at least 6 characters long!",
+        "passwordConfError":"Password is required and should be at least 6 characters long!",
+        "allFieldError":"All fields should be filled and passwords should be matching values!"
+    },
+    "login": {
+        "title":"Log In",
+        "email":"Email",
+        "password":"Password",
+        "loginBtn":"Log In",
+        "emailError":"Valid email is required!",
+        "passwordError":"Password is required and should be at least 6 characters long!"
+    },
+    "task": {
+        "title": "My Tasks",
+        "deleteBtn": "Delete",
+        "minute":"min",
+        "newTaskBtn": "Add New Task",
+        "confirm": "Are you sure you want to delete the '{{value}}' task?"
+    }
+}

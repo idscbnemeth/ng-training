@@ -7,6 +7,7 @@ import {
 import {
   Timekeeper
 } from '../../../shared/shared.barrel';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-task-list-item',
@@ -21,7 +22,7 @@ export class TaskListItemComponent implements OnInit {
   @Output() public onError = new EventEmitter();
   @Output() public onDelete = new EventEmitter<Task>();
 
-  public constructor(private _taskService: TaskService) {
+  public constructor(private _taskService: TaskService, public _taranslateService: TranslateService) {
     //
   }
 
@@ -42,18 +43,21 @@ export class TaskListItemComponent implements OnInit {
   }
 
   public deleteTask(task: Task) {
-    if (!window.confirm(`Are you sure to delete "${task.name}"?`)) {
-      return;
-    }
-    this.loading = true;
-    this._taskService.delete(
-      task,
-      {
-        success: response => this.onDelete.emit(task),
-        error: error => this.onError.emit(),
-        finally: () => this.loading = false
+    const param = task.name;
+    this._taranslateService.get('task.confirm', {value: task.name}).subscribe((res: string) => {
+      if (!window.confirm(res)) {
+        return;
       }
-    )
+      this.loading = true;
+      this._taskService.delete(
+        task,
+        {
+          success: response => this.onDelete.emit(task),
+          error: error => this.onError.emit(),
+          finally: () => this.loading = false
+        }
+      );
+    });
   }
 
 }

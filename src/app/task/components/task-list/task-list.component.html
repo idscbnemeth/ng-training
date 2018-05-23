@@ -1,5 +1,5 @@
 <h3>
-  My Tasks
+  {{'task.title' | translate}}
   <img *ngIf="loading" src="assets/loader.gif">
 </h3>
 <ul>
@@ -12,4 +12,4 @@
     ></app-task-list-item>
   </li>
 </ul>
-<button type="button" class="btn btn-default" (click)="addNewTask()" [disabled]="loading">Add New Task</button>
+<button type="button" class="btn btn-default" (click)="addNewTask()" [disabled]="loading">{{'task.newTaskBtn' | translate}}</button>

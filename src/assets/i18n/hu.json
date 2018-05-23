@@ -1,0 +1,44 @@
+{
+    "home": {
+        "test":"Home működik!"
+    },
+    "navigation": {
+        "homeLink":"Főoldal",
+        "taskLink":"Feladatok",
+        "registrationLink":"Regisztráció",
+        "loginLink":"Belépés",
+        "logoutLink":"Kijelentkezés"
+    },
+    "notFound": {
+        "test":"not-found működik!"
+    },
+    "registration": {
+        "title":"Regisztráció",
+        "name":"Név",
+        "email":"Email",
+        "password":"Jelszó",
+        "passwordConf":"Jelszó (újra)",
+        "regBtn":"Regisztrálás",
+        "cancelBtn":"Alaphelyzet",
+        "nameError":"A Név kötelező mező!",
+        "emailError":"Hibás email cím!",
+        "passwordError":"A jelszó legalább 6 karakter legyen!",
+        "passwordConfError":"A jelszó legalább 6 karakter legyen!!",
+        "allFieldError":"Minden mező kötelező és a jelszavaknak meg kell egyezniük!"
+    },
+    "login": {
+        "title":"Belépés",
+        "email":"Email",
+        "password":"Jelszó",
+        "loginBtn":"Belépés",
+        "emailError":"Hibás email cím!",
+        "passwordError":"A jelszó legalább 6 karakter legyen!"
+    },
+    "task": {
+        "title": "Feladataim",
+        "deleteBtn": "Törlés",
+        "minute":"perce",
+        "newTaskBtn": "Új feladat hozzáadása",
+        "confirm": "Biztos, hogy törlöd a '{{value}}' feladatot?"
+    }
+}

@@ -1,0 +1,9 @@
+.language-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+a {
+    font-weight: bold;
+    cursor: pointer;
+}

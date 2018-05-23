@@ -12,18 +12,18 @@
     <div class="collapse navbar-collapse" id="navbar">
       <ul class="nav navbar-nav">
         <li [routerLinkActive]="['active']">
-          <a [routerLink]="['/home']">Home</a>
+          <a [routerLink]="['/home']">{{'navigation.homeLink' | translate}}</a>
         </li>
         <li [routerLinkActive]="['active']">
-          <a [routerLink]="['/task/list']">Tasks</a>
+          <a [routerLink]="['/task/list']">{{'navigation.taskLink' | translate}}</a>
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li *ngIf="!authService.user" [routerLinkActive]="['active']">
-          <a [routerLink]="['/user/registration']">Registration</a>
+          <a [routerLink]="['/user/registration']">{{'navigation.registrationLink' | translate}}</a>
         </li>
         <li *ngIf="!authService.user" [routerLinkActive]="['active']">
-          <a [routerLink]="['/user/login']">Log In</a>
+          <a [routerLink]="['/user/login']">{{'navigation.loginLink' | translate}}</a>
         </li>
         <li *ngIf="!!authService.user">
           <div>
@@ -32,7 +32,7 @@
           </div>
         </li>
         <li *ngIf="!!authService.user">
-          <a (click)="authService.logout()">Log Out</a>
+          <a (click)="authService.logout()">{{'navigation.logoutLink' | translate}}</a>
         </li>
       </ul>
     </div>
